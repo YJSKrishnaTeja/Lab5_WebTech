@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <h2> Calculator</h2>
+
+  <label for="num1">Enter the first number:</label>
+  <input type="number" id="num1" placeholder="Enter any number">
+
+  <label for="num2">Enter the second number:</label>
+  <input type="number" id="num2" placeholder="Enter any number">
+
+  <button onclick="calculate('add')">Addition</button>
+  <button onclick="calculate('sub')">Subtraction</button>
+  <button onclick="calculate('mul')">Multiplication</button>
+  <button onclick="calculate('div')">Division</button>
+
+  <h3>Results:</h3>
+  <p id="result">Result: </p>
+
+  <script>
+    function calculate(operation) {
+      
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+
+      
+      var result;
+      switch (operation) {
+        case 'add':
+          result = num1 + num2;
+          break;
+        case 'sub':
+          result = num1 - num2;
+          break;
+        case 'mul':
+          result = num1 * num2;
+          break;
+        case 'div':
+          result = num1 / num2;
+          break;
+        default:
+          result = "Invalid operation";
+      }
+
+       
+      document.getElementById("result").textContent = "Result: " + result;
+    }
+  </script>
+
+</body>
+</html>

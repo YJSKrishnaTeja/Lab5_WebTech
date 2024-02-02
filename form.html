@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT | Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Registration Form</h1>
+    </div>
+    <form>
+    <div class="main">
+    <div class="container">
+        <div class="name">
+            <div id="firstname">
+                <label for="fname" id="first">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required>
+            </div>
+            <div id="lastname">
+                <label for="lname" id="last">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required>
+            </div>
+        </div>
+        <div class="line2">
+            <div class="bday">
+                <label for="birthday">Date of Birth</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" id="mail" name="mail" placeholder="JohnDoe@mail.com"  required validate>
+            </div>
+        </div>
+        <div class="line3">
+            <div class="gender">
+                <div id="gen"><label for="gender">Gender</label><br></div>
+                <div id="val"><input type="radio" name="gender" value="male">Male<br></div>
+                <div id="val"><input type="radio" name="gender" value="female">Female<br></div>
+                <div id="val"><input type="radio" name="gender" value="other">Other<br></div>
+            </div>
+            <div class="checkbox">
+                <label for="checkbox">WorkPlace Preference </label><br>
+                <div class="work"><input type="checkbox" name="work">Asian<br></div>
+                <div class="work"><input type="checkbox" name="work">MiddleEastern<br></div>
+                <div class="work"> <input type="checkbox" name="work">Western
+                </div>
+            </div>
+            <div class="pp">
+                <label for="passport">Upload your passportsize photo & CV</label><br>
+                <div class="pic_put"><input type="file" name="fileupload“ accept=" image/*"></div>
+                <div class="cv"><input type="file" name="fileupload“ accept=" image/*"></div>
+
+            </div>
+        </div>
+        <div class="line4">
+            <div class="phn" >
+            <label for="phone">Enter your Phone Number</label><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="9876543210"
+            pattern="[0-9]{10}"  required><br><br>
+        </div>
+        <div class="company">
+            <div class="optn">
+            <label for="company">Dream Company</label><br>
+            <select name="company">
+                <option value="micro"  id="optn">Microsoft</option>
+                <option value="google"  id="optn" Selected>Google</option>
+                <option value="amazon" id="optn">Amazon</option>
+                <option value="gold" id="optn">Goldman Sachs</option>
+                </select>
+            </div>
+            <div class="city">
+                <label for="city">City</label>
+                <input type="city" id="city" name="city" placeholder="Hyderabad" required>
+            </div>
+            <div class="address">
+                <textarea name="adress" rows="5" cols="50">Address: </textarea>
+            </div>
+        </div>
+        </div>
+        <div class="line5">
+            <input type="reset" name="reset" value="Reset" id="reset" />
+            <input type="submit" value="Submit" id="submit" onsubmit="return validateForm()">
+        </div>
+    </div> 
+</div>
+</form>
+<script>
+    function validateForm() {
+        var phone = document.querySelector("phn").value;
+
+        // Regular expression to check if the input contains any numbers
+        var hasNumbers = /\d/.test(textInput);
+
+        if (hasNumbers) {
+            alert("Please do not enter numbers in the text input!");
+            return false;
+        }
+
+        // Additional validation logic can be added here
+
+        // If all validations pass, the form will be submitted
+        return true;
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="form.js"></script>
+</body>
+
+</html>

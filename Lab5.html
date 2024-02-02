@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div id="firstnum">
+                <label for="fnum" id="first">First Number</label>
+                <input type="number" id="num1" name="fnum" placeholder="" required>
+            </div>
+            <div id="secnum">
+                <label for="secnum" id="second">Second Number</label>
+                <input type="number" id="num2" name="secnum" placeholder="" required>
+            </div>
+        </div>
+        <div class="button">
+            <button onclick="calculate('add')">ADD</button>
+            <button onclick="calculate('sub')">SUB</button>
+            <button onclick="calculate('mul')">MUL</button>
+            <button onclick="calculate('div')">DIV</button>
+        </div>
+        <!-- <h3>Results:</h3> -->
+        <p id="result"> </p>
+        <h4 id="slide">Slide ↓</h4>
+
+    </div>
+    <div id="page2">
+        <div class="cont">
+            <label for="inputNumber" id="page2_text">Enter a positive number:</label>
+            <div id="inputNumber"><input type="number" id="inputno" placeholder="Enter a positive number"></div>
+            <div id="btn">
+                <button onclick="checkNumber()">Check</button>
+            </div>
+            <div class="res">
+                <p id="result2">Result: </p>
+            </div>
+            <h4 id="slide">Slide ↓</h4>
+        </div>
+        
+    </div>
+    <div id="page3">
+        <div class="cont2">
+
+
+            <h3>Formatted Dates:</h3>
+            <p id="format1">mm/dd/yy: </p>
+            <p id="format2">mm-dd-yy: </p>
+            <p id="format3">dd/mm/yy: </p>
+            <p id="format4">dd-mm-yy: </p>
+
+            <div class="btn1"><button onclick="formatDate()">Get Current Date</button></div>
+            <h4 id="slide" style="font-size: 1.5vw;">Slide ↓</h4>
+        </div>
+        
+    </div>
+    <div id="page4">
+        <div class="cont2">
+            <h2>Number to Words Converter</h2>
+           <div class="hdng"> <label for="numberInput">Enter a number (0-999): </label></div>
+            <div class="wordin"> <input type="number" id="numberInput" placeholder="Enter here"
+                    oninput="convertToWords()"></div>
+            <p id="res3"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
